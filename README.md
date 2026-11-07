@@ -1,2 +1,2 @@
-## My Personal Website
-# Check it out! :)
+# My Personal Website
+## Check it out! :)
