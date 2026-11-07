@@ -1,0 +1,282 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Kaiwen Wu | Mathematics-Computer Science at UC San Diego</title>
+  <meta name="description" content="Kaiwen Wu studies Mathematics-Computer Science at UC San Diego and builds coding agents, low-latency systems and trading research.">
+  <meta name="theme-color" content="#ffffff">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Kaiwen Wu">
+  <meta property="og:description" content="Mathematics-Computer Science at UC San Diego. Coding agents, low-latency systems and trading research.">
+  <meta property="og:url" content="https://wonder0fyou083.github.io/">
+  <meta property="og:image" content="https://wonder0fyou083.github.io/assets/og.png">
+  <link rel="canonical" href="https://wonder0fyou083.github.io/">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <script>document.documentElement.classList.add('js')</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400..500&family=Instrument+Sans:wght@400;500&display=swap">
+  <link rel="stylesheet" href="assets/scenes/stage.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<a class="skip" href="#work">Skip to projects</a>
+
+<header class="nav" data-ink="light">
+  <nav class="nav-in" aria-label="Main">
+    <a class="nav-mark" href="#top">Kaiwen Wu</a>
+    <div class="nav-links">
+      <a href="#work">Work</a>
+      <a href="#experience">Experience</a>
+      <a href="#about">About</a>
+      <a class="nav-cv" href="cv/Kaiwen_Wu_Resume.pdf" target="_blank" rel="noopener">CV</a>
+    </div>
+  </nav>
+  <span class="nav-bar" aria-hidden="true"></span>
+</header>
+
+<main>
+
+  <!-- Hero: two fields meet at a seam that follows the pointer; the name changes ink where it crosses -->
+  <section class="hero" id="top" data-field="hero">
+    <div class="hero-stage">
+      <canvas class="hero-gl" aria-hidden="true"></canvas>
+      <div class="hero-top" aria-hidden="true"></div>
+      <h1 class="hero-name">Kaiwen Wu</h1>
+      <div class="hero-sub">
+        <p class="hero-line">Mathematics-Computer Science at UC San Diego.<br>Quantitative Developer at Triton Trading Group.</p>
+        <div class="actions">
+          <a class="pill" href="#work">See my work</a>
+          <a class="go" href="cv/Kaiwen_Wu_Resume.pdf" download>Download CV</a>
+        </div>
+      </div>
+      <div class="hero-tick">
+        <div class="hero-tick-in">
+        <div class="mq mq-sm" data-dir="left">
+          <ul class="mq-track" aria-label="Highlights"><li>Software Engineer Intern, Dubbing AI</li><li>13.36 ms p95 retrieval</li><li>100% knowledge Recall@1</li><li>AIME II 10/15</li><li>AMC 12 top 5%</li><li>C++, Python, Go, Rust</li></ul>
+          <ul class="mq-track" aria-hidden="true"><li>Software Engineer Intern, Dubbing AI</li><li>13.36 ms p95 retrieval</li><li>100% knowledge Recall@1</li><li>AIME II 10/15</li><li>AMC 12 top 5%</li><li>C++, Python, Go, Rust</li></ul>
+        </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- swe_agent: a terminal opens to the whole screen and the trace types itself as you scroll -->
+  <section class="scene field field-soft swe" id="work" data-scene="swe-run" data-field="light" data-dark-after="0.3" aria-labelledby="swe-title">
+    <div class="scene-stage swe-stage">
+      <div class="swe-head">
+        <h2 id="swe-title" class="display" data-decode>swe_agent</h2>
+        <p class="statement">A coding agent, built from scratch.</p>
+        <p class="meta"><a class="go" href="https://github.com/Wonder0fYou083/swe_agent" target="_blank" rel="noopener">View on GitHub</a></p>
+      </div>
+      <figure class="term" data-ui>
+        <div class="term-in">
+          <pre><code id="trace"><span class="k">{"type":</span><span class="v">"session_start"</span><span class="k">,<wbr>"task":</span><span class="v">"Fix the failing test in stats.py"</span><span class="k">}</span>
+<span class="k">{"type":</span><span class="v">"step"</span><span class="k">,<wbr>"step":</span><span class="n">1</span><span class="k">,<wbr>"tools":[{<wbr>"command":</span><span class="v">"pytest"</span><span class="k">,<wbr>"exit_code":</span><span class="n">1</span><span class="k">}]}</span>
+<span class="k">{"type":</span><span class="v">"step"</span><span class="k">,<wbr>"step":</span><span class="n">2</span><span class="k">,<wbr>"tools":[{<wbr>"command":</span><span class="v">"cat stats.py"</span><span class="k">,<wbr>"exit_code":</span><span class="n">0</span><span class="k">}]}</span>
+<span class="k">{"type":</span><span class="v">"step"</span><span class="k">,<wbr>"step":</span><span class="n">3</span><span class="k">,<wbr>"tools":[{<wbr>"command":</span><span class="v">"sed -i … stats.py"</span><span class="k">,<wbr>"exit_code":</span><span class="n">0</span><span class="k">}]}</span>
+<span class="k">{"type":</span><span class="v">"step"</span><span class="k">,<wbr>"step":</span><span class="n">4</span><span class="k">,<wbr>"tools":[{<wbr>"command":</span><span class="v">"pytest"</span><span class="k">,<wbr>"exit_code":</span><span class="n">0</span><span class="k">}]}</span>
+<span class="k">{"type":</span><span class="v">"session_end"</span><span class="k">,<wbr>"stop":</span><span class="v">"submitted"</span><span class="k">,<wbr>"steps":</span><span class="n">4</span><span class="k">}</span></code></pre>
+          <div class="term-side">
+            <ol class="loop" aria-label="The agent loop">
+              <li>Model call</li>
+              <li>Tool</li>
+              <li>Observation</li>
+            </ol>
+            <dl class="meters">
+              <div><dt>Steps</dt><dd><b id="m-steps">4</b> of 30</dd><span class="meter"><i id="b-steps"></i></span></div>
+              <div><dt>Cost</dt><dd><b id="m-cost">$0.02</b> of $0.50</dd><span class="meter"><i id="b-cost"></i></span></div>
+              <div><dt>Wall time</dt><dd><b id="m-time">38 s</b> of 600 s</dd><span class="meter"><i id="b-time"></i></span></div>
+            </dl>
+          </div>
+        </div>
+        <figcaption>Sample trace, work in progress. Not affiliated with Princeton's SWE-agent.<a class="go" href="https://github.com/Wonder0fYou083/swe_agent" target="_blank" rel="noopener">GitHub</a></figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- Fast Matrix Multiplication: the live benchmark, with each loop order shown reading memory -->
+  <section class="field field-black matrix" id="matrix" data-field="dark" aria-labelledby="matrix-title">
+    <div class="wrap">
+      <div class="lede" data-r="group">
+        <h2 id="matrix-title" class="display" data-decode>Fast Matrix<br>Multiplication</h2>
+        <p class="statement">Same math. Different order.</p>
+        <p class="meta"><a class="go" href="https://github.com/Wonder0fYou083/matrix_multiplication_ultra_fast" target="_blank" rel="noopener">View on GitHub</a></p>
+      </div>
+
+      <div class="bench" data-ui data-r="settle" data-tilt>
+        <div class="bench-readout">
+          <p class="bench-big" id="bench-big">How much faster?</p>
+          <p class="bench-sub" id="bench-sub">Measure it on this device.</p>
+          <button class="pill" id="bench-run" type="button" hidden>Run benchmark</button>
+          <noscript><p class="bench-sub">Visiting i, then k, then j reads memory in the order it's stored. With JavaScript on, this panel measures the difference on your device.</p></noscript>
+        </div>
+        <canvas class="towers" aria-hidden="true"></canvas>
+        <div class="walks">
+          <div class="walk">
+            <canvas class="walk-c" id="walk-ijk" data-order="ijk" width="480" height="560" aria-hidden="true"></canvas>
+            <div class="bench-row">
+              <p class="bench-name"><span class="bench-long">Textbook, </span>i‑j‑k</p>
+              <p class="bench-time" id="time-ijk">Not run yet</p>
+              <div class="bench-track"><div class="bench-bar bench-bar-slow" id="bar-ijk"></div></div>
+            </div>
+          </div>
+          <div class="walk">
+            <canvas class="walk-c" id="walk-ikj" data-order="ikj" width="480" height="560" aria-hidden="true"></canvas>
+            <div class="bench-row">
+              <p class="bench-name"><span class="bench-long">Cache-friendly, </span>i‑k‑j</p>
+              <p class="bench-time" id="time-ikj">Not run yet</p>
+              <div class="bench-track"><div class="bench-bar bench-bar-fast" id="bar-ikj"></div></div>
+            </div>
+          </div>
+        </div>
+        <p class="bench-note" id="bench-note" role="status" aria-live="polite">Each order reading a real matrix, with the same cells laid out in memory in front. The benchmark runs in JavaScript on this device.</p>
+      </div>
+
+      <div class="matrix-grid" data-r="group">
+        <div class="matrix-stat">
+          <p class="display">10 ms</p>
+          <p class="meta">The repo's C, 512 × 512 on an Apple M3.</p>
+        </div>
+        <figure class="code" data-ui>
+          <pre><code><span class="k">for</span> (size_t i = <span class="n">0</span>; i &lt; c.rows; ++i) {
+    <span class="k">for</span> (size_t k = <span class="n">0</span>; k &lt; a.cols; ++k) {
+        <span class="k">for</span> (size_t j = <span class="n">0</span>; j &lt; c.cols; ++j) {
+            c.data[i * c.cols + j] +=
+                a.data[i * a.cols + k] * b.data[k * b.cols + j];
+        }
+    }
+}</code></pre>
+          <figcaption>From mat_mul in src/mat/mat.c</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- Adaptive Grid Trading: the path draws with the scroll and the grid opens as volatility rises -->
+  <section class="scene field field-white gridx" id="grid" data-scene="grid-open" data-field="light" data-dark-after="0.33" data-dark-until="0.61" aria-labelledby="grid-title">
+    <div class="scene-stage grid-stage">
+      <div class="grid-flip" aria-hidden="true"></div>
+      <div class="lede">
+        <h2 id="grid-title" class="display" data-decode>Adaptive Grid Trading</h2>
+        <p class="statement">A grid that widens as volatility rises.</p>
+        <p class="meta"><a class="go" href="https://github.com/Wonder0fYou083/adaptive-grid-trading" target="_blank" rel="noopener">View on GitHub</a></p>
+      </div>
+      <figure class="chart" data-ui>
+        <div class="chart-plot">
+          <svg viewBox="0 0 1200 480" preserveAspectRatio="none" role="img" aria-label="A simulated price path that swings around its mean. Grid levels sit close together while the path is calm, spread apart while it is volatile, and close up again when it calms.">
+            <defs><clipPath id="reveal"><rect id="reveal-rect" x="0" y="0" width="1200" height="480"/></clipPath></defs>
+            <rect class="band" x="385.3" y="0" width="433.4" height="480"/>
+            <g class="win" data-from="0" data-delta="0.706"><path class="lvl" d="M0 223.3H80.3M0 256.7H80.3M0 206.7H80.3M0 273.3H80.3M0 190H80.3M0 290H80.3"/></g><g class="win" data-from="80.3" data-delta="0.704"><path class="lvl" d="M80.3 223.4H160.5M80.3 256.6H160.5M80.3 206.7H160.5M80.3 273.3H160.5M80.3 190.1H160.5M80.3 289.9H160.5"/></g><g class="win" data-from="160.5" data-delta="0.800"><path class="lvl" d="M160.5 221.1H240.8M160.5 258.9H240.8M160.5 202.2H240.8M160.5 277.8H240.8M160.5 183.3H240.8M160.5 296.7H240.8"/></g><g class="win" data-from="240.8" data-delta="0.840"><path class="lvl" d="M240.8 220.2H321.1M240.8 259.8H321.1M240.8 200.3H321.1M240.8 279.7H321.1M240.8 180.5H321.1M240.8 299.5H321.1"/></g><g class="win" data-from="321.1" data-delta="1.071"><path class="lvl" d="M321.1 214.7H401.3M321.1 265.3H401.3M321.1 189.4H401.3M321.1 290.6H401.3M321.1 164.1H401.3M321.1 315.9H401.3"/></g><g class="win" data-from="401.3" data-delta="2.196"><path class="lvl" d="M401.3 188.1H481.6M401.3 291.9H481.6M401.3 136.2H481.6M401.3 343.8H481.6M401.3 84.3H481.6M401.3 395.7H481.6"/></g><g class="win" data-from="481.6" data-delta="2.900"><path class="lvl" d="M481.6 171.5H561.9M481.6 308.5H561.9M481.6 103H561.9M481.6 377H561.9M481.6 34.4H561.9M481.6 445.6H561.9"/></g><g class="win" data-from="561.9" data-delta="3.186"><path class="lvl" d="M561.9 164.7H642.1M561.9 315.3H642.1M561.9 89.5H642.1M561.9 390.5H642.1M561.9 14.2H642.1M561.9 465.8H642.1"/></g><g class="win" data-from="642.1" data-delta="3.256"><path class="lvl" d="M642.1 163.1H722.4M642.1 316.9H722.4M642.1 86.2H722.4M642.1 393.8H722.4M642.1 9.2H722.4M642.1 470.8H722.4"/></g><g class="win" data-from="722.4" data-delta="2.639"><path class="lvl" d="M722.4 177.7H802.7M722.4 302.3H802.7M722.4 115.3H802.7M722.4 364.7H802.7M722.4 53H802.7M722.4 427H802.7"/></g><g class="win" data-from="802.7" data-delta="1.980"><path class="lvl" d="M802.7 193.2H882.9M802.7 286.8H882.9M802.7 146.5H882.9M802.7 333.5H882.9M802.7 99.7H882.9M802.7 380.3H882.9"/></g><g class="win" data-from="882.9" data-delta="1.171"><path class="lvl" d="M882.9 212.3H963.2M882.9 267.7H963.2M882.9 184.7H963.2M882.9 295.3H963.2M882.9 157H963.2M882.9 323H963.2"/></g><g class="win" data-from="963.2" data-delta="0.741"><path class="lvl" d="M963.2 222.5H1043.5M963.2 257.5H1043.5M963.2 205H1043.5M963.2 275H1043.5M963.2 187.5H1043.5M963.2 292.5H1043.5"/></g><g class="win" data-from="1043.5" data-delta="0.846"><path class="lvl" d="M1043.5 220H1123.7M1043.5 260H1123.7M1043.5 200H1123.7M1043.5 280H1123.7M1043.5 180.1H1123.7M1043.5 299.9H1123.7"/></g><g class="win" data-from="1123.7" data-delta="0.824"><path class="lvl" d="M1123.7 220.5H1200M1123.7 259.5H1200M1123.7 201.1H1200M1123.7 278.9H1200M1123.7 181.6H1200M1123.7 298.4H1200"/></g>
+            <path class="mid" d="M0 240H1200"/>
+            <path class="path" clip-path="url(#reveal)" d="M0 240L4 233.8L8 229.4L12 229.6L16.1 224.7L20.1 236.3L24.1 238.4L28.1 246.6L32.1 246.2L36.1 253L40.1 239.1L44.1 239.9L48.2 240.7L52.2 252L56.2 240.2L60.2 230.5L64.2 238.7L68.2 233.7L72.2 229.9L76.3 229.3L80.3 239.3L84.3 250.7L88.3 253.6L92.3 254.5L96.3 242.7L100.3 239.5L104.3 237.1L108.4 235.6L112.4 234.1L116.4 235.4L120.4 248.9L124.4 256.7L128.4 250.2L132.4 254.8L136.5 254L140.5 249.9L144.5 234.4L148.5 242L152.5 241.7L156.5 238.4L160.5 247.7L164.5 246.5L168.6 250.4L172.6 247.6L176.6 231.3L180.6 236.3L184.6 247.5L188.6 247.4L192.6 249.9L196.7 258L200.7 258.5L204.7 263.2L208.7 266.2L212.7 263.1L216.7 252.9L220.7 266.7L224.7 245.8L228.8 230.1L232.8 238.1L236.8 236.3L240.8 242.3L244.8 248.2L248.8 235.8L252.8 237L256.9 239.5L260.9 227.8L264.9 236.1L268.9 230.9L272.9 226.7L276.9 221.6L280.9 206.3L284.9 206.4L289 201.7L293 210.6L297 212.7L301 201L305 203.4L309 196.9L313 205.5L317.1 212.6L321.1 199.9L325.1 215.2L329.1 215L333.1 220.7L337.1 217.4L341.1 224.1L345.2 220.8L349.2 221.9L353.2 230.4L357.2 228.3L361.2 225.4L365.2 224.3L369.2 214.6L373.2 206.8L377.3 201.3L381.3 216.6L385.3 247.1L389.3 207.7L393.3 194.6L397.3 199.6L401.3 212.8L405.4 192L409.4 170.9L413.4 139.5L417.4 171.4L421.4 217.6L425.4 242.5L429.4 247L433.4 276.2L437.5 241.1L441.5 211.2L445.5 243.4L449.5 254.8L453.5 205.3L457.5 261.9L461.5 253.1L465.6 266.7L469.6 260.6L473.6 269.3L477.6 287.6L481.6 264.6L485.6 287L489.6 238.1L493.6 202.3L497.7 148L501.7 146.9L505.7 155L509.7 209.6L513.7 210.4L517.7 243.6L521.7 185.9L525.8 212.7L529.8 225.7L533.8 196.5L537.8 191.1L541.8 205.2L545.8 175.9L549.8 164.7L553.8 171.5L557.9 150.3L561.9 167.1L565.9 113.6L569.9 93.2L573.9 177.8L577.9 223.2L581.9 221L586 231.3L590 223L594 184.4L598 169.5L602 160.6L606 150.4L610 155.3L614 79.2L618.1 121L622.1 142.6L626.1 101.2L630.1 87.4L634.1 87.4L638.1 108.5L642.1 138.9L646.2 148.5L650.2 125L654.2 156L658.2 165L662.2 184.6L666.2 227.2L670.2 242L674.2 255.9L678.3 257.1L682.3 263.5L686.3 344L690.3 322.3L694.3 299.2L698.3 327.8L702.3 296.1L706.4 321.8L710.4 330.6L714.4 332.9L718.4 365.9L722.4 345.1L726.4 340.5L730.4 297.7L734.4 299.3L738.5 301.1L742.5 306.2L746.5 278.1L750.5 253.8L754.5 260.7L758.5 199.4L762.5 201.2L766.6 171.5L770.6 142.5L774.6 164.4L778.6 217.9L782.6 216.1L786.6 241.6L790.6 219.9L794.6 222.9L798.7 224.8L802.7 220.4L806.7 166.3L810.7 165.2L814.7 178.3L818.7 172.2L822.7 168.6L826.8 182.2L830.8 198.6L834.8 205.9L838.8 209.9L842.8 211.6L846.8 219.6L850.8 202.1L854.8 219.6L858.9 219.7L862.9 226.7L866.9 222.5L870.9 217.4L874.9 219.7L878.9 219.2L882.9 229.4L887 234.4L891 243.3L895 230.9L899 242.6L903 243.9L907 232.3L911 233.1L915.1 225.3L919.1 241.1L923.1 241.8L927.1 231.8L931.1 237.6L935.1 235.9L939.1 241.2L943.1 238.2L947.2 236.7L951.2 240.6L955.2 237.5L959.2 238.9L963.2 241.2L967.2 244.8L971.2 248.4L975.3 236.5L979.3 242.5L983.3 255.4L987.3 253.1L991.3 251.4L995.3 252.7L999.3 256L1003.3 265.1L1007.4 264.9L1011.4 274.2L1015.4 283.6L1019.4 285.9L1023.4 273.4L1027.4 258.7L1031.4 268.4L1035.5 260.9L1039.5 255.7L1043.5 257.5L1047.5 267.5L1051.5 265.3L1055.5 260L1059.5 274.3L1063.5 284.7L1067.6 287.6L1071.6 295.5L1075.6 269.6L1079.6 254.9L1083.6 250.8L1087.6 239L1091.6 232.9L1095.7 231.8L1099.7 237.1L1103.7 239.7L1107.7 246.8L1111.7 249.5L1115.7 258L1119.7 253.5L1123.7 251.1L1127.8 265.9L1131.8 264.5L1135.8 257.3L1139.8 266.2L1143.8 254.3L1147.8 254.2L1151.8 258L1155.9 273.2L1159.9 276.9L1163.9 268L1167.9 269.8L1171.9 272.1L1175.9 280.9L1179.9 283.4L1183.9 278.5L1188 280.4L1192 278.9L1196 274.3L1200 267.3"/>
+          </svg>
+          <span class="chart-dot" aria-hidden="true"></span>
+          <p class="chart-read">Grid spacing <b id="chart-x">×4.6</b> <span id="chart-peak">at the peak</span></p>
+        </div>
+        <figcaption>Simulated path, not market data or a backtest. Research only, not investment advice.</figcaption>
+      </figure>
+      <p class="formula">score = volatility × (1 − |φ|)</p>
+    </div>
+  </section>
+
+  <!-- C++ Concurrency: not started yet, so no link and no specs -->
+  <section class="field field-blue" id="next" data-field="dark" aria-labelledby="next-title">
+    <div class="wrap next-wrap" data-r="threads">
+      <h2 id="next-title" class="display">C++ Concurrency</h2>
+      <p class="statement">Starting next.</p>
+    </div>
+  </section>
+
+  <!-- Also built -->
+  <section class="field field-soft also-field" id="also" data-field="light" aria-labelledby="also-title">
+    <div class="wrap also-wrap">
+      <h2 id="also-title" class="display" data-r="rise">Also built</h2>
+      <ul class="also" data-r="rows">
+        <li><a class="also-name" href="https://github.com/Wonder0fYou083/scoped_memory_rag_service" target="_blank" rel="noopener">Scoped Memory RAG Service</a></li>
+        <li><span class="also-name">Unix-like shell in C</span></li>
+        <li><span class="also-name">ARM simulator and C allocator</span></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Experience: the rest is on the CV -->
+  <section class="scene field field-graphite xp" id="experience" data-scene="xp-run" data-field="dark" aria-labelledby="xp-title">
+    <div class="scene-stage xp-stage">
+      <h2 id="xp-title" class="statement xp-title">Experience</h2>
+      <ol class="xp-track">
+        <li class="xp-panel">
+          <p class="xp-big">C++</p>
+          <h3 class="statement">Triton Trading Group</h3>
+          <p>Quantitative Developer, 2026 to present</p>
+          <p class="xp-cap">Low-latency systems and fast factor calculations.</p>
+        </li>
+        <li class="xp-panel">
+          <p class="xp-big"><span data-roll="13.36" data-dec="2">13.36</span> ms</p>
+          <h3 class="statement">Dubbing AI</h3>
+          <p>Software Engineer Intern, 2026</p>
+          <p class="xp-cap">p95 retrieval latency, with 100% knowledge and 99.5% slang Recall@1.</p>
+        </li>
+        <li class="xp-panel">
+          <p class="xp-big"><span data-roll="300000" data-suffix="+">300,000+</span></p>
+          <h3 class="statement">AscendEX</h3>
+          <p>Data Analysis Intern, 2024</p>
+          <p class="xp-cap">Records analyzed for transaction patterns and anomalies.</p>
+        </li>
+      </ol>
+      <p class="xp-cv"><a class="pill" href="cv/Kaiwen_Wu_Resume.pdf" download>Download CV</a></p>
+    </div>
+  </section>
+
+  <!-- About: the hero's seam returns and sweeps through the bio -->
+  <section class="bio-field" id="about" data-field="seam" aria-labelledby="bio">
+    <div class="bio-seam" data-seam aria-hidden="true"></div>
+    <h2 class="bio" id="bio" data-r="flip">I code.<br>I build.</h2>
+  </section>
+
+  <section class="field field-black more" data-field="dark" aria-labelledby="school">
+    <div class="mq" data-dir="left">
+      <ul class="mq-track" aria-label="Languages"><li>C++</li><li>C</li><li>Python</li><li>Go</li><li>Rust</li><li>Java</li><li>SQL</li></ul>
+      <ul class="mq-track" aria-hidden="true"><li>C++</li><li>C</li><li>Python</li><li>Go</li><li>Rust</li><li>Java</li><li>SQL</li></ul>
+    </div>
+    <div class="mq" data-dir="right">
+      <ul class="mq-track" aria-label="Tools"><li>FastAPI</li><li>Redis</li><li>Docker</li><li>Linux</li><li>RAG</li><li>pandas</li><li>SciPy</li></ul>
+      <ul class="mq-track" aria-hidden="true"><li>FastAPI</li><li>Redis</li><li>Docker</li><li>Linux</li><li>RAG</li><li>pandas</li><li>SciPy</li></ul>
+    </div>
+    <div class="wrap more-wrap">
+      <h2 class="statement" id="school">UC San Diego</h2>
+      <p>B.S. Mathematics-Computer Science, expected 2029. AIME II 10/15. AMC 12 top 5%.</p>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer" id="contact" data-field="dark">
+  <div class="wrap">
+    <p class="footer-name" aria-hidden="true" data-r="letters">Kaiwen Wu</p>
+    <div class="footer-row">
+      <h2 class="display footer-title">Get in touch</h2>
+      <ul class="places">
+        <li><a class="go" href="https://www.linkedin.com/in/kaiwen-wu-676051377/" target="_blank" rel="noopener">LinkedIn</a></li>
+        <li><a class="go" href="https://github.com/Wonder0fYou083" target="_blank" rel="noopener">GitHub</a></li>
+        <li><a class="go" href="cv/Kaiwen_Wu_Resume.pdf" target="_blank" rel="noopener">CV</a></li>
+      </ul>
+    </div>
+    <div class="legal">
+      <p>© 2026 Kaiwen Wu</p>
+      <a class="go go-up" href="#top">Back to top</a>
+    </div>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.15.0/dist/gsap.min.js" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.15.0/dist/ScrollTrigger.min.js" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/lenis@1.3.26/dist/lenis.min.js" defer></script>
+<script src="assets/scenes/stage.js" defer></script>
+<script src="assets/gl.js" defer></script>
+<script src="main.js" defer></script>
+</body>
+</html>
